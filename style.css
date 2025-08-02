@@ -1,0 +1,174 @@
+* {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+        }
+        
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+            background: linear-gradient(135deg, #1a2a6c, #b21f1f, #fdbb2d);
+            padding: 20px;
+        }
+        
+        .container {
+            width: 100%;
+            max-width: 500px;
+            background-color: rgba(255, 255, 255, 0.95);
+            border-radius: 20px;
+            box-shadow: 0 15px 30px rgba(0, 0, 0, 0.3);
+            overflow: hidden;
+        }
+        
+        header {
+            background: linear-gradient(to right, #3498db, #2c3e50);
+            color: white;
+            text-align: center;
+            padding: 20px 0;
+            font-size: 1.8rem;
+            font-weight: 600;
+        }
+        
+        .stopwatch {
+            padding: 30px;
+            text-align: center;
+        }
+        
+        .display {
+            font-size: 4.5rem;
+            font-weight: 700;
+            margin: 20px 0;
+            color: #2c3e50;
+            font-family: monospace;
+            letter-spacing: 3px;
+            text-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+        }
+        
+        .controls {
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+            margin-bottom: 30px;
+        }
+        
+        .btn {
+            padding: 12px 25px;
+            font-size: 1.1rem;
+            border: none;
+            border-radius: 50px;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            font-weight: 600;
+            box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        }
+        
+        .btn:active {
+            transform: translateY(2px);
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+        }
+        
+        .start-btn {
+            background-color: #27ae60;
+            color: white;
+        }
+        
+        .start-btn:hover {
+            background-color: #2ecc71;
+        }
+        
+        .pause-btn {
+            background-color: #f39c12;
+            color: white;
+        }
+        
+        .pause-btn:hover {
+            background-color: #f1c40f;
+        }
+        
+        .lap-btn {
+            background-color: #3498db;
+            color: white;
+        }
+        
+        .lap-btn:hover {
+            background-color: #2980b9;
+        }
+        
+        .reset-btn {
+            background-color: #e74c3c;
+            color: white;
+        }
+        
+        .reset-btn:hover {
+            background-color: #c0392b;
+        }
+        
+        .laps-container {
+            max-height: 250px;
+            overflow-y: auto;
+            border-top: 1px solid #eee;
+            padding: 20px 10px;
+        }
+        
+        .laps-title {
+            text-align: center;
+            color: #7f8c8d;
+            margin-bottom: 15px;
+            font-size: 1.3rem;
+        }
+        
+        .lap-item {
+            display: flex;
+            justify-content: space-between;
+            padding: 10px 15px;
+            border-bottom: 1px solid #f1f1f1;
+            font-size: 1.1rem;
+        }
+        
+        .lap-item:nth-child(odd) {
+            background-color: #f9f9f9;
+        }
+        
+        .lap-number {
+            font-weight: 600;
+            color: #2c3e50;
+        }
+        
+        .lap-time {
+            font-family: monospace;
+            font-weight: 600;
+            color: #3498db;
+        }
+        
+        /* Scrollbar styling */
+        .laps-container::-webkit-scrollbar {
+            width: 8px;
+        }
+        
+        .laps-container::-webkit-scrollbar-track {
+            background: #f1f1f1;
+            border-radius: 10px;
+        }
+        
+        .laps-container::-webkit-scrollbar-thumb {
+            background: #3498db;
+            border-radius: 10px;
+        }
+        
+        @media (max-width: 500px) {
+            .display {
+                font-size: 3.5rem;
+            }
+            
+            .controls {
+                flex-wrap: wrap;
+            }
+            
+            .btn {
+                flex: 1;
+                min-width: 120px;
+            }
+        }
